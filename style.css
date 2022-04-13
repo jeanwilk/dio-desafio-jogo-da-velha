@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, h1 {
+    text-align: center;
+}
+
+#d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9 {
+    display: inline-block;
+    margin: 0.2rem;
+    width: 5rem;
+    height: 5rem;
+    background: gray;
+}
