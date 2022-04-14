@@ -8,34 +8,93 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <header>
-    <h1>Jogo da Velha</h1>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Insira os jogadores</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <label 
+                            class="sr-only" 
+                            for="jogador-x">Jogador X</label>
+                        <input 
+                            type="text"
+                            id="jogador-x"
+                            name="jogador-x"
+                            placeholder="Nome"
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <label 
+                            class="sr-only" 
+                            for="jogador-o">Jogador O</label>
+                        <input 
+                            type="text"
+                            id="jogador-o"
+                            name="jogador-o"
+                            placeholder="Nome"
+                        />
+                    </div>
+
+                    <div class="input-group actions">
+                        <a 
+                        onclick="Modal.close()"
+                        href="#" 
+                        class="button cancel">Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </header>
+
 <body>
-    <div id="linha1">
-        <div id="d1">-</div>
-        <div id="d2">-</div>
-        <div id="d3">-</div>
-    </div>
-    <div id="linha2">
-        <div id="d4">-</div>
-        <div id="d5">-</div>
-        <div id="d6">-</div>
-    </div>
-    <div id="linha3">
-        <div id="d7">-</div>
-        <div id="d8">-</div>
-        <div id="d9">-</div>
+    <!--Título-->
+    <h1>Jogo da Velha</h1>
+
+    <!--Quadrados-->
+    <div>
+        <div id="1" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="2" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="3" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
     </div>
     <div>
-        <label>Jogador</label>
+        <div id="4" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="5" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="6" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+    </div>
+    <div>
+        <div id="7" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="8" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+        <div id="9" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+    </div>
+
+    <!--Jogador-->
+    <div class="jogador">
+        <label>Jogador:</label>
         <label id="jogador-selecionado"></label>
     </div>
-    <div>
-        <label>Vencedor</label>
+
+    <!--vencedor-->
+    <div class="vencedor">
+        <label>Vencedor:</label>
         <label id="vencedor-selecionado"></label>
     </div>
-    <div>
-        <button>Reiniciar</button>
+
+    <!--Botões-->
+    <div class="botoes">
+        <!--Botão reiniciar-->
+        <div>
+            <button id="reiniciar" onclick="reiniciar()">Reiniciar</button>
+        </div>
+
+        <div>
+            <!--Botão inserir jogadores-->
+            <button id="abrir-modal" onclick="Modal.open()  ">Inserir jogadores</button>
+        </div>
     </div>
 </body>
+<script src="./velha.js"></script>
 </html>

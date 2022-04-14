@@ -1,16 +1,136 @@
-* {
-    margin: 0;
-    padding: 0;
+/* Modal ========================================================= */
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    visibility: visible;
+
+    z-index: 999;
 }
 
-body, h1 {
+.modal-overlay.active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Form ========================================================= */
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group .help {
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+/* Estilizar o body */
+body {
     text-align: center;
+    background: rgb(238, 237, 240);
 }
 
-#d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9 {
+/* Estilizar os quadrados */
+.quadrado {
+    text-align: center;
     display: inline-block;
-    margin: 0.2rem;
-    width: 5rem;
-    height: 5rem;
+    margin: 0.3rem;
+    width: 2.5rem;
+    padding: 2.5rem;
     background: gray;
+    color: gray;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
 }
+
+/* Estilizar o jogador e o vencedor */
+.jogador, .vencedor {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Estilizar os botões */
+.botoes {
+    display: flex;  
+    justify-content: space-between;
+    margin: 0 23% 0;   
+}
+
+/* Estilizar o botão reiniciar */
+#reiniciar {
+    margin-top: 1rem;
+    width: 7rem;
+    height: 3rem;
+    background: rgb(160, 124, 57);
+    color: white;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-color: rgb(49, 29, 14);
+}
+
+/* Estilizar o botão inserir jogadores */
+#abrir-modal {
+    margin-top: 1rem;
+    width: 7rem;
+    height: 3rem;
+    background: teal;
+    color: white;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border-color: rgb(49, 29, 14);
+
+}
+
+/* Responsive ========================================================= */
+@media (min-width: 800px) {
+    .botoes {
+        display: flex;  
+        justify-content: space-between;
+        margin: 0 34% 0;   
+    }
