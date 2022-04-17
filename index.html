@@ -8,46 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <header>
-    <div class="modal-overlay">
-        <div class="modal">
-            <div id="form">
-                <h2>Insira os jogadores</h2>
-                <form action="" onsubmit="Form.submit(event)">
-                    <div class="input-group">
-                        <label 
-                            class="sr-only" 
-                            for="jogador-x">Jogador X</label>
-                        <input 
-                            type="text"
-                            id="jogador-x"
-                            name="jogador-x"
-                            placeholder="Nome"
-                        />
-                    </div>
 
-                    <div class="input-group">
-                        <label 
-                            class="sr-only" 
-                            for="jogador-o">Jogador O</label>
-                        <input 
-                            type="text"
-                            id="jogador-o"
-                            name="jogador-o"
-                            placeholder="Nome"
-                        />
-                    </div>
-
-                    <div class="input-group actions">
-                        <a 
-                        onclick="Modal.close()"
-                        href="#" 
-                        class="button cancel">Cancelar</a>
-                        <button>Salvar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </header>
 
 <body>
@@ -83,17 +44,9 @@
         <label id="vencedor-selecionado"></label>
     </div>
 
-    <!--Botões-->
-    <div class="botoes">
-        <!--Botão reiniciar-->
-        <div>
-            <button id="reiniciar" onclick="reiniciar()">Reiniciar</button>
-        </div>
-
-        <div>
-            <!--Botão inserir jogadores-->
-            <button id="abrir-modal" onclick="Modal.open()  ">Inserir jogadores</button>
-        </div>
+    <!--Botão reiniciar-->
+    <div>
+        <button id="reiniciar" onclick="reiniciar()">Reiniciar</button>
     </div>
 </body>
 <script src="./velha.js"></script>

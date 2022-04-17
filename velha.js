@@ -1,31 +1,3 @@
-// Adicionar ou remover a classe 'active' na classe 'modal-overlay'
-const Modal = {
-    open() {
-        // Abrir modal
-        // Adicionar a class active ao modal
-        document
-            .querySelector('.modal-overlay')
-            .classList
-            .remove('active')
-    },
-    close() {
-        // Fechar modal
-        // Remover a class active do modal
-        document
-            .querySelector('.modal-overlay')
-            .classList
-            .add('active')
-    }
-}
-
-const Form = {
-
-    submit(event) {
-        Modal.close()
-
-    }
-}
-
 // Jogo da Velha
 var jogador, vencedor = null;
 var jogadorSelecionado = document.getElementById('jogador-selecionado');
